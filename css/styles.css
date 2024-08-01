@@ -12,8 +12,8 @@
  */
 :root {
 
-  --bs-primary-rgb: 30, 48, 243;
-  --bs-secondary-rgb: 226, 30, 128;
+  --bs-primary-rgb: 57, 255, 20;
+  --bs-secondary-rgb: 2,150,188;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -3525,7 +3525,7 @@ textarea.form-control-lg {
 .nav-link {
   display: block;
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-  font-size: var(--bs-nav-link-font-size);
+  font-size: 1.2rem;
   font-weight: var(--bs-nav-link-font-weight);
   color: var(--bs-nav-link-color);
   text-decoration: none;
@@ -4498,7 +4498,7 @@ textarea.form-control-lg {
 .badge {
   --bs-badge-padding-x: 0.65em;
   --bs-badge-padding-y: 0.35em;
-  --bs-badge-font-size: 0.75em;
+  --bs-badge-font-size: 1.3em;
   --bs-badge-font-weight: 700;
   --bs-badge-color: #fff;
   --bs-badge-border-radius: 0.375rem;
@@ -11499,42 +11499,7 @@ html {
   left: 50%;
   transform: translateX(-50%);
 }
-.profile .dots-1 {
-  position: absolute;
-  width: 3vw;
-  right: 1.5vw;
-  top: 4vw;
-}
-.profile .dots-1 svg {
-  fill: #fff;
-}
-.profile .dots-2 {
-  position: absolute;
-  width: 3vw;
-  right: -4vw;
-  top: 6.05vw;
-}
-.profile .dots-2 svg {
-  fill: #1e30f3;
-}
-.profile .dots-3 {
-  position: absolute;
-  width: 3vw;
-  left: 1.5vw;
-  bottom: 6.05vw;
-}
-.profile .dots-3 svg {
-  fill: #fff;
-}
-.profile .dots-4 {
-  position: absolute;
-  width: 3vw;
-  left: -4vw;
-  bottom: 4vw;
-}
-.profile .dots-4 svg {
-  fill: #1e30f3;
-}
+
 
 @media (min-width: 576px) {
   .profile {
@@ -11639,4 +11604,7 @@ html {
 .logo{
   width: 3rem;
 
+}
+.link{
+  text-decoration: none;
 }
