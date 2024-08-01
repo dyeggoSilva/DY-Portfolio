@@ -405,10 +405,6 @@ legend + * {
   height: auto;
 }
 
-[type=search] {
-  outline-offset: -2px;
-  -webkit-appearance: textfield;
-}
 
 /* rtl:raw:
 [type="tel"],
@@ -11607,4 +11603,16 @@ html {
 }
 .link{
   text-decoration: none;
+}
+.pag{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagg{
+width: 30rem;
+margin: 5rem;
+
+
 }
