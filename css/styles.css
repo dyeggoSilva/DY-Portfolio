@@ -11613,6 +11613,14 @@ html {
 .pagg{
 width: 30rem;
 margin: 5rem;
+}
 
+.projetocenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.text{
+  text-align: center;
 }
