@@ -349,7 +349,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: button;
+appearance: button;
 }
 button:not(:disabled),
 [type=button]:not(:disabled),
@@ -424,7 +424,7 @@ legend + * {
 
 ::file-selector-button {
   font: inherit;
-  -webkit-appearance: button;
+  appearance: button;
 }
 
 output {
@@ -11461,7 +11461,7 @@ html {
 
 .text-gradient {
   background: -webkit-linear-gradient(315deg, #39FF14 0%, #0296BC 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
