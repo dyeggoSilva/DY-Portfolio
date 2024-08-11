@@ -11624,3 +11624,8 @@ margin: 5rem;
 .text{
   text-align: center;
 }
+@media(max-width:700px){
+  .badge{
+    --bs-badge-font-size: 0.75em;
+  }
+}
