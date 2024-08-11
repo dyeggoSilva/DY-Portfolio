@@ -1,6 +1,12 @@
 const apiUrl = "https://api-contato-protfolio.onrender.com"
 
 
+
+window.onload = function listarPedidos() {
+    fetch(`${apiUrl}/contatos`)
+    .then(response => response.json())
+}
+
 function envioform(){
     
         const name = document.getElementById('name').value;
@@ -30,10 +36,10 @@ function envioform(){
         .catch(error => {
             console.error('Erro ao criar pedido:', error);
         });
-    
+        
     setTimeout(function() {
         window.location.href = "./index.html";
-    }, 10000); // 3000 milissegundos = 3 segundos
+    }, 20000); // 3000 milissegundos = 3 segundos
 }
 /*
 * Start Bootstrap - SB Forms v0.4.1 (startbootstrap.com)
