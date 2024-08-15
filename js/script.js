@@ -7,7 +7,7 @@ window.onload = function listarPedidos() {
     .then(response => response.json())
 }
 
-function envioform(){
+async function envioform(){
     
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
@@ -15,36 +15,35 @@ function envioform(){
         const message= document.getElementById('message').value;
     
         console.log(name, email, phone, message);
-    
-        fetch(`${apiUrl}/contato/add`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                nome: name,
-                email: email,
-                telefone: phone,
-                menssagem: message,
-            }),
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Pedido criado:', data);
-            listarPedidos();
-        })
-        .catch(error => {
-            console.error('Erro ao criar pedido:', error);
-        });
+
+        const response = await fetch(`${apiUrl}/contato/add`,
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    nome: name,
+                    email: email,
+                    telefone: phone,
+                    menssagem: message,
+                }),
+            });
+            
         
-    setTimeout(function() {
-        window.location.href = "./index.html";
-    }, 20000); // 3000 milissegundos = 3 segundos
+
+        if (response.ok) {
+            const data = await response;
+
+            if (data.status === 200) { 
+                setTimeout(function() {
+                    window.location.href = "./index.html";
+                },3000)
+            }
+        } else {
+            console.error('Erro ao acessar a API:', response.status);
+        }
 }
-/*
-* Start Bootstrap - SB Forms v0.4.1 (startbootstrap.com)
-* Copyright 2013-2021 Start Bootstrap LLC
-*/
 (()=>{
     "use strict";
     var t = function(t, e, n, i) {
