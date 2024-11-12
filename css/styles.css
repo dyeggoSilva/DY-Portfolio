@@ -3628,8 +3628,8 @@ textarea.form-control-lg {
 .navbar {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;
-  --bs-navbar-color: rgba(0, 0, 0, 0.55);
-  --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
+  --bs-navbar-color: rgb(38, 50, 56);
+  --bs-navbar-hover-color: rgb(0, 0, 0);
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
   --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-brand-padding-y: 0.3125rem;
@@ -11456,11 +11456,11 @@ html {
 
 .bg-gradient-primary-to-secondary {
   background: #1e30f3;
-  background: linear-gradient(135deg, #39FF14 0%, #0296BC 100%);
+  background: linear-gradient(135deg, #39FF14 0%, #263238 100%);
 }
 
 .text-gradient {
-  background: -webkit-linear-gradient(315deg, #39FF14 0%, #0296BC 100%);
+  background: -webkit-linear-gradient(315deg, #39FF14 0%, #263238   100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
