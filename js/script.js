@@ -3,7 +3,7 @@ const apiUrl = "https://api-contato-protfolio.onrender.com"
 
 
 window.onload = function listarPedidos() {
-    fetch(`${apiUrl}/contatos`)
+    fetch(`${apiUrl}/ok`)
     .then(response => response.json())
 }
 
