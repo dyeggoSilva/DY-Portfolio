@@ -8090,7 +8090,7 @@ textarea.form-control-lg {
 
 .text-secondary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+  --bs-nav-link-color: var(--bs-navbar-color) !important;
 }
 
 .text-success {
