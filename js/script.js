@@ -7,16 +7,17 @@ window.onload = function listarPedidos() {
     .then(response => response.json())
 }
 
-async function envioform(){
+async function envioformfeedback(){
     
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const phone = document.getElementById('phone').value;
-        const message= document.getElementById('message').value;
+        const vagaConcorrida = document.getElementById('vagaConcorrida').value;
+        const empresa = document.getElementById('empresa').value;
+        const feedback = document.getElementById('feedback').value;
     
-        console.log(name, email, phone, message);
 
-        const response = await fetch(`${apiUrl}/contato/add`,
+        const response = await fetch(`${apiUrl}/contato/feedback`,
             {
                 method: 'POST',
                 headers: {
@@ -26,7 +27,9 @@ async function envioform(){
                     nome: name,
                     email: email,
                     telefone: phone,
-                    menssagem: message,
+                    vagaConcorrida: vagaConcorrida,
+                    empresa: empresa,
+                    feedback: feedback,
                 }),
             });
             
@@ -43,6 +46,45 @@ async function envioform(){
         } else {
             console.error('Erro ao acessar a API:', response.status);
         }
+}
+
+
+async function envioform(){
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const message= document.getElementById('message').value;
+
+    console.log(name, email, phone, message);
+
+    const response = await fetch(`${apiUrl}/contato/add`,
+        {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                nome: name,
+                email: email,
+                telefone: phone,
+                menssagem: message,
+            }),
+        });
+        
+    
+
+    if (response.ok) {
+        const data = await response;
+
+        if (data.status === 200) { 
+            setTimeout(function() {
+                window.location.href = "./index.html";
+            },3000)
+        }
+    } else {
+        console.error('Erro ao acessar a API:', response.status);
+    }
 }
 (()=>{
     "use strict";
