@@ -1,23 +1,22 @@
-const apiUrl = "https://api-contato-protfolio.onrender.com"
+const apiUrl = "https://api-contato-protfolio.onrender.com";
 const api2 = "http://localhost:8081"
 
-
-
 window.onload = function listarPedidos() {
-    fetch(`${apiUrl}/ok`)
-    .then(response => response.json())
-}
+    fetch(`${api2}/ok`)
+};
 
-async function envioform(){
-    
+async function envioFormFeedback() {
+  
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
-    const message= document.getElementById('message').value;
+    const vagaConcorrida= document.getElementById('vaga').value;
+    const empresa= document.getElementById('empresa').value;
+    const feedback = document.getElementById('feedback').value;
 
-    console.log(name, email, phone, message);
+    console.log(name, email, phone, vagaConcorrida, empresa, feedback);
 
-    const response = await fetch(`${apiUrl}/contato/add`,
+    const response = await fetch(`${api2}/contato/feedback`,
         {
             method: 'POST',
             headers: {
@@ -27,7 +26,9 @@ async function envioform(){
                 nome: name,
                 email: email,
                 telefone: phone,
-                menssagem: message,
+                vagaConcorrida: vagaConcorrida,
+                empresa: empresa,
+                feedback: feedback
             }),
         });
         
@@ -45,6 +46,7 @@ async function envioform(){
         console.error('Erro ao acessar a API:', response.status);
     }
 }
+
 (()=>{
     "use strict";
     var t = function(t, e, n, i) {
