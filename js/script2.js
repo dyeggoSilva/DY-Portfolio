@@ -2,7 +2,7 @@ const apiUrl = "https://api-contato-protfolio.onrender.com";
 const api2 = "http://localhost:8081"
 
 window.onload = function listarPedidos() {
-    fetch(`${api2}/ok`)
+    fetch(`${apiUrl}/ok`)
 };
 
 async function envioFormFeedback() {
@@ -16,7 +16,7 @@ async function envioFormFeedback() {
 
     console.log(name, email, phone, vagaConcorrida, empresa, feedback);
 
-    const response = await fetch(`${api2}/contato/feedback`,
+    const response = await fetch(`${apiUrl}/contato/feedback`,
         {
             method: 'POST',
             headers: {
