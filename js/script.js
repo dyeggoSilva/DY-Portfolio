@@ -3,10 +3,10 @@ const api2 = "http://localhost:8081"
 
 
 
-window.onload = function listarPedidos() {
+/*window.onload = function listarPedidos() {
     fetch(`${apiUrl}/ok`)
     .then(response => response.json())
-}
+}*/
 
 async function envioform(){
     
