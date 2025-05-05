@@ -1,9 +1,6 @@
 const apiUrl = "https://testerailway-production-7170.up.railway.app";
 const api2 = "http://localhost:8081"
 
-/*window.onload = function listarPedidos() {
-    fetch(`${apiUrl}/ok`)
-};*/
 
 async function envioFormFeedback() {
   
