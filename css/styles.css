@@ -45,33 +45,33 @@
   --bs-border-radius-pill: 50rem;
 }
 
-.m_4077926309880596569slider {
+.slider {
       overflow: hidden;
       background-color: rgba(255, 255, 255, 0);
       border: none;
       padding: 10px 0;
     }
 
-    .m_4077926309880596569slider-track {
+    .slider-track {
       display: flex;
       width: calc(200px * 10); /* número de logos vezes largura */
       animation: deslizar 15s linear infinite;
     }
 
-    .m_4077926309880596569logo1 {
+    .logo1 {
       width: 200px;
       padding: 10px;
       flex-shrink: 0;
     }
 
-    .m_4077926309880596569logo1 img {
+    .logo1 img {
       width: 100%;
       height: auto;
       filter: grayscale(100%);
       transition: filter 0.3s;
     }
 
-    .m_4077926309880596569logo1 img:hover {
+    .logo1 img:hover {
       filter: none;
     }
 
