@@ -30,7 +30,7 @@
             justify-content: center;
             display: flex;
         }
-        img{
+        .dy{
             width: 3rem;
             margin: 30px;
             margin-top: 20px;
@@ -65,38 +65,25 @@
       background-color: rgba(255, 255, 255, 0);
       border: none;
       padding: 10px 0;
+      
     }
 
     .slider-track {
       display: flex;
-      width: calc(200px * 10); /* número de logos vezes largura */
+      justify-content: center;
       }
 
     .logo {
-      width: 8rem;
-      padding: 10px;
+      width: 5em;;
+      padding: 0.1rem;
       flex-shrink: 0;
     }
 
     .logo img {
       width: 100%;
       height: auto;
-      filter: grayscale(100%);
-      transition: filter 0.3s;
     }
 
-    .logo img:hover {
-      filter: none;
-    }
-
-    @keyframes deslizar {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%);
-      }
-    }
     </style>
 </head>
 
@@ -108,7 +95,7 @@
         <header class="topo">
 
             <div class="cont">
-                <img src="https://dyeggosilva.netlify.app/assets/camisa.png" alt="DY">
+                <img class="dy" src="https://dyeggosilva.netlify.app/assets/camisa.png" alt="DY">
             </div>
             <div>
                 <h1 class="tit">
