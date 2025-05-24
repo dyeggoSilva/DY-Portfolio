@@ -59,6 +59,45 @@
             margin-bottom: 2rem;
         }
        
+
+    .slider {
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
+      padding: 10px 0;
+    }
+
+    .slider-track {
+      display: flex;
+      width: calc(200px * 10); /* número de logos vezes largura */
+      animation: deslizar 15s linear infinite;
+    }
+
+    .logo {
+      width: 200px;
+      padding: 10px;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      width: 100%;
+      height: auto;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+
+    .logo img:hover {
+      filter: none;
+    }
+
+    @keyframes deslizar {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
     </style>
 </head>
 
@@ -99,7 +138,26 @@
                 
                </h3>
                <br/>
+
+
+               <div class="slider">
+                <div class="slider-track">
+                <!-- Repete os logos pra looping contínuo -->
+                <div class="logo"><img src="https://dyeggosilva.netlify.app/assets/mente.svg" alt="mente"></div>
+                <div class="logo"><img src="https://dyeggosilva.netlify.app/assets/a2.svg" alt="A2"></div>
+                <div class="logo"><img src="https://dyeggosilva.netlify.app/assets/ko.svg" alt="ko"></div>
+                <div class="logo"><img src="https://dyeggosilva.netlify.app/assets/lary.svg" alt="lary"></div>
+                <div class="logo"><img src="https://dyeggosilva.netlify.app/assets/RotaHorizonte.svg" alt="Twitter"></div>
+                <!-- repete para looping -->
                 
+                <div class="logo"><img src="https://dyeggosilva.netlify.app/assets/mente.svg" alt="mente"></div>
+                <div class="logo"><img src="https://dyeggosilva.netlify.app/assets/a2.svg" alt="A2"></div>
+                <div class="logo"><img src="https://dyeggosilva.netlify.app/assets/ko.svg" alt="ko"></div>
+                <div class="logo"><img src="https://dyeggosilva.netlify.app/assets/lary.svg" alt="lary"></div>
+                <div class="logo"><img src="https://dyeggosilva.netlify.app/assets/RotaHorizonte.svg" alt="Twitter"></div>
+                
+            </div>
+                            
         </div>
     </section>
 

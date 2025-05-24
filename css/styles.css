@@ -45,6 +45,45 @@
   --bs-border-radius-pill: 50rem;
 }
 
+.slider {
+      overflow: hidden;
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
+      padding: 10px 0;
+    }
+
+    .slider-track {
+      display: flex;
+      width: calc(200px * 10); /* número de logos vezes largura */
+      animation: deslizar 15s linear infinite;
+    }
+
+    .logo1 {
+      width: 200px;
+      padding: 10px;
+      flex-shrink: 0;
+    }
+
+    .logo1 img {
+      width: 100%;
+      height: auto;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+
+    .logo1 img:hover {
+      filter: none;
+    }
+
+    @keyframes deslizar {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
 *,
 *::before,
 *::after {

@@ -1,0 +1,17 @@
+.spinner {
+      width: 100px;
+      height: 100px;
+      margin: 50px auto;
+      background-color: #3498db;
+      border-radius: 50%;
+      animation: girar 5s linear infinite;
+    }
+
+    @keyframes girar {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
