@@ -17,7 +17,7 @@ async function envioform(){
 
     console.log(name, email, phone, message);
 
-    const response = await fetch(`${api2}/contato/add`,
+    const response = await fetch(`${apiUrl}/contato/add`,
         {
             method: 'POST',
             headers: {
