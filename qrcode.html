@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de QR Code</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+        }
+        img {
+            margin-top: 20px;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerador de QR Code</h1>
+    <input type="text" id="inputTexto" placeholder="Digite o texto ou link">
+    <button onclick="gerarQRCode()">Gerar</button>
+    <br><br>
+    <img id="imagemQr" src="" alt="QR Code" hidden>
+    <br>
+    <a id="botaoDownload" href="#" download="qr-code.png" hidden>
+        <button>Baixar QR Code</button>
+    </a>
+
+    <script src="/js/scriptqrcode.js"></script>
+</body>
+</html>
