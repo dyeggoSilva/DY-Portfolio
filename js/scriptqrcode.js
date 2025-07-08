@@ -1,5 +1,9 @@
-const url = "https://api-qrcode-portfolio.onrender.com";
+
+
+ const url = "https://api-qrcode-portfolio.onrender.com";
 function gerarQRCode() {
+
+   
     const texto = document.getElementById('inputTexto').value;
     if (!texto) {
         alert('Digite um texto ou link!');
@@ -16,5 +20,4 @@ function gerarQRCode() {
     imagem.hidden = false;
 
     botaoDownload.href = urlDownload;
-    botaoDownload.hidden = false;
-}
+    botaoDownload.hidden = false;}
